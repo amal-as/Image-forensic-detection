@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB91F195-849C-4418-AEE6-12DC5728A282}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImageForensic</RootNamespace>
+    <AssemblyName>ImageForensic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\iplab_src\iplab_src\iplab\bin\Debug\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>..\..\..\iplab_src\iplab_src\iplab\bin\Debug\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>..\..\..\iplab_src\iplab_src\iplab\bin\Debug\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="DockingToolbar">
+      <HintPath>..\..\..\iplab_src\iplab_src\iplab\bin\Debug\DockingToolbar.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceGrid2">
+      <HintPath>..\..\..\iplab_src\iplab_src\iplab\bin\Debug\SourceGrid2.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceLibrary">
+      <HintPath>..\..\..\iplab_src\iplab_src\iplab\bin\Debug\SourceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI">
+      <HintPath>..\..\..\iplab_src\iplab_src\iplab\bin\Debug\WeifenLuo.WinFormsUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseConnection.cs" />
+    <Compile Include="Baseform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baseform.Designer.cs">
+      <DependentUpon>Baseform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Color32.cs" />
+    <Compile Include="Controls\ColorSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FilterPreview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GridArray.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GridArrayInt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Histogram.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\HuePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crypter.cs" />
+    <Compile Include="DCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DCT.Designer.cs">
+      <DependentUpon>DCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DCTform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DCTform.Designer.cs">
+      <DependentUpon>DCTform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiscreteCosineTransform2D.cs" />
+    <Compile Include="Embedd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Embedd.designer.cs">
+      <DependentUpon>Embedd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Final.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Final.Designer.cs">
+      <DependentUpon>Final.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistogramaDesenat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImageHandler.cs" />
+    <Compile Include="LoadImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadImage.Designer.cs">
+      <DependentUpon>LoadImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.cs">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Noise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Noise.Designer.cs">
+      <DependentUpon>Noise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quantization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quantization.Designer.cs">
+      <DependentUpon>Quantization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuantizationMatrix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuantizationMatrix.Designer.cs">
+      <DependentUpon>QuantizationMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEmbed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEmbed.Designer.cs">
+      <DependentUpon>TEmbed.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Baseform.resx">
+      <DependentUpon>Baseform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ColorSlider.resx">
+      <DependentUpon>ColorSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FilterPreview.resx">
+      <DependentUpon>FilterPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GridArray.resx">
+      <DependentUpon>GridArray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\GridArrayInt.resx">
+      <DependentUpon>GridArrayInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Histogram.resx">
+      <DependentUpon>Histogram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HuePicker.resx">
+      <DependentUpon>HuePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DCT.resx">
+      <DependentUpon>DCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DCTform.resx">
+      <DependentUpon>DCTform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Embedd.resx">
+      <DependentUpon>Embedd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Final.resx">
+      <DependentUpon>Final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistogramaDesenat.resx">
+      <DependentUpon>HistogramaDesenat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadImage.resx">
+      <DependentUpon>LoadImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Noise.resx">
+      <DependentUpon>Noise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Quantization.resx">
+      <DependentUpon>Quantization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuantizationMatrix.resx">
+      <DependentUpon>QuantizationMatrix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEmbed.resx">
+      <DependentUpon>TEmbed.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ANTIFORENSIC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archive2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\u2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
